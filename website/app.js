@@ -1,13 +1,16 @@
 /* Global Variables */
 
-// the auth variable for open weather api
+// the auth variable for openweather API
 const auth = '89a4ffeac4081aa6dbebdd33fbe7476f';
+
+// The url used to fetch data from openweather API
 const url = 'https://api.openweathermap.org/data/2.5/weather?zip=';
+
 // Create a new date instance dynamically with JS
 let d = new Date();
 let newDate = d.getMonth() + '.' + d.getDate() + '.' + d.getFullYear();
 
-// Adding event listener for the generate button
+// Adding event listener for the generate button that gets the user input and then sends a request to get temperature then posts it to the server then fetches it and displays it.
 document.getElementById('generate').addEventListener('click', async (e) => {
 	const postalCode = document.getElementById('zip').value;
 	const feelings = document.getElementById('feelings').value;
@@ -20,6 +23,8 @@ document.getElementById('generate').addEventListener('click', async (e) => {
 	await updateUI();
 });
 
+// getTemp function to GET temperature from the openweather API
+
 async function getTemp(url, postalCode, auth) {
 	const res = await fetch(`${url}${postalCode},us&appid=${auth}`);
 	try {
@@ -30,6 +35,7 @@ async function getTemp(url, postalCode, auth) {
 	}
 }
 
+// postData function to POST data to the server
 async function postData(url, data) {
 	const postReq = await fetch(url, {
 		method: 'POST',
@@ -42,6 +48,7 @@ async function postData(url, data) {
 	return;
 }
 
+// updateUI function to fetch data from the server and display them on the website
 async function updateUI() {
 	const req = await fetch('http://localhost:8080/all');
 	try {
