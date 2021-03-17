@@ -33,6 +33,6 @@ app.post('/postData', (req, res) => {
 	projectData.temperature = req.body.temperature;
 	projectData.date = req.body.date;
 	projectData.userResponse = req.body.userResponse;
-	res.send(200);
+	res.sendStatus(200);
 	console.log('New data has been posted');
 });
