@@ -5,8 +5,7 @@ body{
 
 #app{
     display: grid;
-    grid-auto-rows: minmax(150px, auto);
-    /* grid-template-columns:  */
+    grid-auto-rows: minmax(50px, auto);  
     height:100vh;
     background: #f23557;
     color: #f0d43a;
@@ -91,6 +90,7 @@ textarea:focus,
 button:focus {
     outline: none;
 }
+
 /* Style for Placeholder Text*/
 ::placeholder { /* Firefox, Chrome, Opera */ 
     color: #f0d43a; 
