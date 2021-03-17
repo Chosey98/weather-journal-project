@@ -1,10 +1,13 @@
 # Weather-Journal App Project
 
 ## Overview
-This project requires you to create an asynchronous web app that uses Web API and user data to dynamically update the UI. 
+
+This project gives the people in the US the ability to get the weather data based on their zip code.
 
 ## Instructions
-This will require modifying the `server.js` file and the `website/app.js` file. You can see `index.html` for element references, and once you are finished with the project steps, you can use `style.css` to style your application to customized perfection.
 
-## Extras
-If you are interested in testing your code as you go, you can use `tests.js` as a template for writing and running some basic tests for your code.
+You will find fields on the website that you should fill which are the zip code and your feelings about the day and then press on generate, It will get the temperature based on your zip code using the openweather api and return them to you on the website where you can see them.
+
+## Author
+
+Yousef Ashraf
