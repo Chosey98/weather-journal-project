@@ -29,7 +29,6 @@ app.get('/all', (req, res) => {
 
 // A POST route that adds incoming data to the ProjectData
 app.post('/postData', (req, res) => {
-	console.log(req.body);
 	projectData.temperature = req.body.temperature;
 	projectData.date = req.body.date;
 	projectData.userResponse = req.body.userResponse;
