@@ -1,7 +1,7 @@
 // Imports
-import cors from 'cors';
-import bodyParser from 'body-parser';
-import express from 'express';
+const cors = require('cors');
+const bodyParser = require('body-parser');
+const express = require('express');
 
 // Setup empty JS object to act as endpoint for all routes
 let projectData = {};
